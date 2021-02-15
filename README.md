@@ -20,6 +20,7 @@ Utilisez ensuite NPM pour installer Typescript :
 `npm install typescript --save-dev`
 
 Que signifie l'option `--save-dev` ?
+_(Permet d'installer "TypeScript" en local dans le projet comme dépendance de développement)_
 
 Initialisez ensuite le fichier de configuration `tsconfig.json` :
 
@@ -38,6 +39,7 @@ Effectuez une première compilation de votre code via :
 `npx tsc`
  
 Que signifie cette commande ?
+_(Génère un fichier index.ts qui est la version compilée du fichier index.js)_
 Ouvrez le fichier `build/index.js` généré, assurez-vous qu'il est bien conforme à votre code initial.
 
 
