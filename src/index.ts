@@ -1,3 +1,11 @@
-const hello = "Hello";
-const world = "World";
-console.log(hello + " " + world);
+const prompts = require('prompts');
+
+(async () => {
+    const response = await prompts({
+        type: 'text',
+        name: 'value',
+        message: 'Your name',
+    });
+
+    console.log(response);
+})();
