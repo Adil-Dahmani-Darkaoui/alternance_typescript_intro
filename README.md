@@ -120,7 +120,7 @@ Ajoutez une méthode `attack(enemy: Enemy)` à votre classe `Character` afin de 
   - un message s'affiche dans la console pour indiquer le nombre de dégâts au joueur
   - les points de vie de l'ennemi se voient imputés du nombre de dégâts
   
-Intégrez cette première phase d'attaque à votre fichier `index.ts`, dans le cas où le joueur choisir de combattre.
+Intégrez cette première phase d'attaque à votre fichier `index.ts`, dans le cas où le joueur choisi de combattre.
 
 
 #### 8. Riposte
