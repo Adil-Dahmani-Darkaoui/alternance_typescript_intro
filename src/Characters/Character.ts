@@ -4,7 +4,7 @@ export class Character {
 
     protected name: string;
     protected sexe: string;
-    protected pv: number;
+    public pv: number;
     protected damages = Math.floor(Math.random() * 100) + 1;
 
     constructor(name: string, sexe: string, pv: number) {
@@ -18,7 +18,7 @@ export class Character {
     }
 
     public attack(enemy: Enemy){
-        enemy.pv = this.pv - this.damages;
+        enemy.pv -= this.damages;
         console.log('Vous avez infligé ' + this.damages + ' points de dégâts à votre ennemi.')
     }
 
