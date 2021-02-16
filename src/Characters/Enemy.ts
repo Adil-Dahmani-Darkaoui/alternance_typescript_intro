@@ -1,10 +1,9 @@
-import {Character} from "./Character";
+import {Fighter} from "./Fighter";
 
-export class Enemy {
+export class Enemy implements Fighter{
 
     public name: string;
     public pv = Math.floor(Math.random() * 100) + 1;
-    protected damages = (Math.floor(Math.random() * 100) + 1)/2;
 
     constructor(name: string) {
         this.name = name;
@@ -15,10 +14,16 @@ export class Enemy {
         console.log( this.name + ' possède ' + this.pv + ' points de vie.');
     }
 
-    public attack(charac: Character){
-        charac.pv -= this.damages;
-        console.log( this.name + ' vous a infligé ' + this.damages + ' points de dégâts.')
-        console.log('HAHA, Sire ! Je vous attends ! À moins que vous préfériez que l’on dise partout que le roi est une petite pédale qui pisse dans son froc à l’idée de se battre !')
+    public attack(fighter:Fighter){
+        let damages = Math.round((Math.floor(Math.random() * 100) + 1)/2);
+        fighter.takeDamage(damages)
+        console.log(this.name + ' vous inflige ' + damages + ' points de dégâts')
     }
 
+    takeDamage(attack: number): number {
+        let fighterPv = this.pv;
+        this.pv = fighterPv - attack;
+        console.log(this.name + ' subit ' + attack + ' points de dégâts')
+        return attack*0.5;
+    }
 }
